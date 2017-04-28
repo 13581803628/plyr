@@ -1,12 +1,12 @@
-# Controls
+# 控件
 
-This is the markup that is rendered for the Plyr controls. You can use the default controls or provide a customized version of markup based on your needs.
+这是渲染`Plyr`控件的标记语言。你可以使用默认控件或根据需要提供自定义的标记语言版本。
 
-## Internationalization using default controls
+## 国际标准使用的默认控件
 
-You can provide an `i18n` object as one of your options when initialising the plugin which we be used when rendering the controls.
+在初始化控件时，可以提供一个`i18n`对象作为你的选项之一，它会在渲染控件时起作用。
 
-### Example
+### 例子
 
 ```javascript
 i18n: {
@@ -25,24 +25,24 @@ i18n: {
 }
 ```
 
-Note: `{seektime}` will be replaced with your configured seek time or the default. For example "Forward {seektime} secs" would render as "Forward 10 secs".
+**注意**：`{seektime}`会被你配置的搜索时间或者默认搜索时间替换。举个例子，"Forward {seektime} secs"会被渲染为"Forward 10 secs"。
 
-## Using custom HTML
+## 使用自定义HTML
 
-You can specify the HTML for the controls using the `html` option.
+您可以使用`html`选项指定控件的HTML内容。
 
-The classes and data attributes used in your template should match the `selectors` option.
+模板中使用的类和数据属性应与选择器选项匹配。
 
-You need to add several placeholders to your html template that are replaced when rendering:
+你需要在你的HTML模板中添加几个占位符，这些占位符在渲染时被替换：
 
-- `{id}` - the dynamically generated ID for the player (for form controls)
-- `{seektime}` - the seek time specified in options for fast forward and rewind
+- `{id}` - 动态生成的播放器ID（用于表单控件）
+- `{seektime}` - 在快进和快退选项中指定的寻道时间
 
-You can include only the controls you need when specifying custom html.
+指定自定义html时，你只能包含所需的控件。
 
-### Example
+### 例子
 
-This is an example `html` option with all controls.
+这是一个具有所有控件`html`选项的示例。
 
 ```javascript
 var controls = ["<div class='plyr__controls'>",
